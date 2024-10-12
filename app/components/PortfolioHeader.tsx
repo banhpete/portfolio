@@ -7,7 +7,7 @@ export default function PortfolioHeader({}) {
   return (
     <div>
       <header
-        className={`mt-28 flex items-center justify-center text-7xl ${koulen.className}`}
+        className={`flex items-center justify-center text-7xl ${koulen.className}`}
       >
         PBANH.DEV
       </header>

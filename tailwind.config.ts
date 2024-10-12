@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import tailwindAnimated from "tailwindcss-animated"
 
 const config: Config = {
   content: [
@@ -10,10 +11,11 @@ const config: Config = {
     extend: {
       colors: {
         background: "var(--background)",
-        foreground: "var(--foreground)",
       },
     },
   },
-  plugins: [],
+  plugins: [
+    tailwindAnimated
+  ],
 };
 export default config;

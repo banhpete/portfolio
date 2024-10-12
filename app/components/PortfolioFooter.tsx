@@ -1,5 +1,4 @@
 import { Poppins } from "next/font/google";
-import Link from "next/link";
 import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 const poppins = Poppins({ weight: ["400"], subsets: ["latin"] });
@@ -7,7 +6,7 @@ const poppins = Poppins({ weight: ["400"], subsets: ["latin"] });
 export default function PortfolioFooter() {
   return (
     <footer
-      className={`mb-8 text-sm ${poppins.className} flex flex-col items-center justify-center`}
+      className={`text-sm ${poppins.className} flex flex-col items-center justify-center`}
     >
       <p>&copy; 2024 Peter Banh. All rights reserved.</p>
       <p>Designed/Conceptualized in Figma. Created using Nextjs.</p>
