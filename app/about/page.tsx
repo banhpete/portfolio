@@ -4,12 +4,11 @@ import { Poppins } from "next/font/google";
 import { ReactSketchCanvas, ReactSketchCanvasRef } from "react-sketch-canvas";
 import { AiOutlineInfoCircle, AiOutlineRedo } from "react-icons/ai";
 import { ChangeEvent, useRef, useState } from "react";
-import { VscSymbolColor } from "react-icons/vsc";
 import { Tooltip } from "react-tooltip";
 
 const poppins = Poppins({ weight: ["400"], subsets: ["latin"] });
 
-export default function Home() {
+export default function About() {
   const canvasRef = useRef<ReactSketchCanvasRef>(null);
   const [strokeColor, setStrokeColor] = useState("#6497eb");
   const onColorChange = (event: ChangeEvent<HTMLInputElement>) => {
