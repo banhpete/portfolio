@@ -24,7 +24,9 @@ export default function RootLayout({
             <PortfolioHeader />
           </div>
           <div className={`${poppins.className} flex flex-grow justify-center`}>
-            <div className="mt-10 w-[800px] border-4  h-5/6">{children}</div>
+            <div className="mt-10 w-[800px] border-4  h-[675px]">
+              {children}
+            </div>
           </div>
           <div className="mb-16">
             <PortfolioFooter />
