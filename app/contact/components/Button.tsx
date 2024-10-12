@@ -1,5 +1,3 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps } from "react";
-
 export default function Button({
   children,
   className,
@@ -9,8 +7,8 @@ export default function Button({
   disabled,
 }: Readonly<{
   children: string;
-  onClick?: () => {};
-  onSubmit?: () => {};
+  onClick?: () => void;
+  onSubmit?: () => void;
   className?: string;
   type?: "button" | "submit" | undefined;
   disabled?: boolean | undefined;

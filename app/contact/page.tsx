@@ -14,7 +14,7 @@ export default function Contact() {
         <p className="mt-6 text-center">
           Want to collaborate? Have a question? Just want to say hi?
           <br />
-          Fill out the form below and I'll get back to you!
+          Fill out the form below and I&apos;ll get back to you!
         </p>
         <form
           className="flex flex-col mt-6"

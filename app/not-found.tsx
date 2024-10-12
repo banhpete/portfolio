@@ -1,5 +1,4 @@
 import { Koulen } from "next/font/google";
-import Link from "next/link";
 
 const koulen = Koulen({ weight: ["400"], subsets: ["latin"] });
 

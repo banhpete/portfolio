@@ -1,12 +1,9 @@
 "use client";
 
-import { Poppins } from "next/font/google";
 import { ReactSketchCanvas, ReactSketchCanvasRef } from "react-sketch-canvas";
 import { AiOutlineInfoCircle, AiOutlineRedo } from "react-icons/ai";
 import { ChangeEvent, useRef, useState } from "react";
 import { Tooltip } from "react-tooltip";
-
-const poppins = Poppins({ weight: ["400"], subsets: ["latin"] });
 
 export default function About() {
   const canvasRef = useRef<ReactSketchCanvasRef>(null);
@@ -65,7 +62,7 @@ export default function About() {
       </div>
       <div className="mt-8">
         <h1 className="animate-fade -text-lg text-center">
-          Hi I'm Peter Banh. I'm a full-stack developer and I love to:
+          Hi I&apos;m Peter Banh. I&apos;m a full-stack developer and I love to:
         </h1>
         <p className="mt-2 font-semibold text-center leading-8">
           <span className="animate-fade animate-delay-[600ms]">Learn</span>
@@ -84,12 +81,12 @@ export default function About() {
             learn to code and build a simple web app for work and I fell in love
             with programming. After two years of being a Process Engineer, I
             quit, enrolled myself in a coding bootcamp at General Assembly and
-            haven't looked back since.
+            haven&apos;t looked back since.
           </p>
           <p className={`px-5 py-3`}>
-            Now, I'm based in Burnaby, British Columbia and I'm passionate about
-            working with a team to build beautiful and scalable software to
-            solve problems for people.
+            Now, I&apos;m based in Burnaby, British Columbia and I&apos;m
+            passionate about working with a team to build beautiful and scalable
+            software to solve problems for people.
           </p>
         </div>
       </div>
