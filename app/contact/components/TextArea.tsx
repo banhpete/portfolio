@@ -1,13 +1,17 @@
+import { ChangeEvent } from "react";
+
 export default function TextArea({
   id,
   label,
   placeHolder,
   className,
+  onChange,
 }: Readonly<{
   id: string;
   label: string;
   placeHolder?: string | undefined;
   className?: string | undefined;
+  onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 }>) {
   return (
     <div className={`${className} flex flex-col`}>
@@ -19,6 +23,7 @@ export default function TextArea({
         name={id}
         className={`p-2 w-full h-[175px] focus:outline-blue-800 focus:bg-blue-50 border-black border-2`}
         id={id}
+        onChange={onChange}
       ></textarea>
     </div>
   );

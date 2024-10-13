@@ -1,10 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import Button from "./components/Button";
 import TextArea from "./components/TextArea";
 import TextInput from "./components/TextInput";
 
 export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const onSubmit = () => {
+    console.log(name, email, message, process.env.NEXT_PUBLIC_TEST_ENV);
+  };
+
   return (
     <div className="flex justify-center">
       <div className="flex flex-col items-center justify-center w-5/6">
@@ -20,6 +29,7 @@ export default function Contact() {
           className="flex flex-col mt-6"
           onSubmit={(event) => {
             event.preventDefault();
+            onSubmit();
           }}
         >
           <div className="flex mt-4">
@@ -29,6 +39,7 @@ export default function Contact() {
               label="Your name"
               placeHolder="Enter your name here..."
               id="name"
+              onChange={(e) => setName(e.currentTarget.value)}
             />
             <TextInput
               type="email"
@@ -36,6 +47,7 @@ export default function Contact() {
               label="Your email"
               placeHolder="Enter your email here..."
               id="emailInput"
+              onChange={(e) => setEmail(e.currentTarget.value)}
             />
           </div>
           <TextArea
@@ -43,8 +55,13 @@ export default function Contact() {
             label="Your message"
             placeHolder="Enter your message here..."
             id="message"
+            onChange={(e) => setMessage(e.currentTarget.value)}
           />
-          <Button type="submit" className="mt-6 flex-grow" disabled>
+          <Button
+            type="submit"
+            className="mt-6 flex-grow"
+            disabled={!name || !email || !message}
+          >
             Submit
           </Button>
         </form>
