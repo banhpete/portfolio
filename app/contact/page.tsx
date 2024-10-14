@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Button from "./components/Button";
+import Button from "../components/Button";
 import TextArea from "./components/TextArea";
 import TextInput from "./components/TextInput";
 
@@ -15,9 +15,9 @@ export default function Contact() {
   };
 
   return (
-    <div className="flex justify-center">
-      <div className="flex flex-col items-center justify-center w-5/6">
-        <h1 className="mt-12 text-3xl">
+    <div className="border-4 h-[675px] flex flex-grow justify-center">
+      <div className="flex flex-col items-center w-5/6">
+        <h1 className="mt-16 text-3xl">
           <i>Leave me a note</i>
         </h1>
         <p className="mt-6 text-center">
@@ -59,7 +59,7 @@ export default function Contact() {
           />
           <Button
             type="submit"
-            className="mt-6 flex-grow"
+            className="mt-8 flex-grow"
             disabled={!name || !email || !message}
           >
             Submit

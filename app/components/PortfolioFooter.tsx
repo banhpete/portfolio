@@ -10,7 +10,7 @@ export default function PortfolioFooter() {
     >
       <p>&copy; 2024 Peter Banh. All rights reserved.</p>
       <p>Designed/Conceptualized in Figma. Created using Nextjs.</p>
-      <div className={`mt-4 w-16 flex justify-between`}>
+      <div className={`my-4 w-16 flex justify-between`}>
         <a rel="noopener noreferrer" href="https://github.com/banhpete">
           <AiFillGithub className="size-7" />
         </a>

@@ -17,7 +17,7 @@ export default function About() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="border-4 h-[675px] flex flex-col items-center justify-center">
       <Tooltip id="my-tooltip" />
       <div>
         <div className="flex mt-4 -mx-4 -mb-6 justify-between flex-row-reverse">

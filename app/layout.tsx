@@ -19,16 +19,16 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body className="flex h-dvh flex-col content-center justify-between">
+        <body className="flex h-dvh flex-col items-center justify-between">
           <div className="mt-8">
             <PortfolioHeader />
           </div>
-          <div className={`${poppins.className} flex flex-grow justify-center`}>
-            <div className="mt-10 w-[800px] border-4  h-[675px]">
-              {children}
-            </div>
+          <div
+            className={`mt-10 w-[800px] ${poppins.className} flex flex-grow justify-center`}
+          >
+            {children}
           </div>
-          <div className="mb-16">
+          <div className="mt-8 mb-16">
             <PortfolioFooter />
           </div>
         </body>
