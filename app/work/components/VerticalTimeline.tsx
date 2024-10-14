@@ -6,13 +6,11 @@ const VerticalTimeline = ({
   animate = true,
   className = "",
   layout = "2-columns",
-  lineColor = "#FFF",
   children,
 }: Readonly<{
   animate?: boolean;
   className?: string;
   layout?: string;
-  lineColor?: string;
   children?: React.ReactNode;
 }>) => {
   return (

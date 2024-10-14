@@ -23,7 +23,6 @@ const VerticalTimelineElement = ({
     triggerOnce: true,
   },
   visible = true,
-  shadowSize = "small", // small | medium | large
 }: Readonly<{
   children?: React.ReactNode;
   className?: string;
@@ -42,7 +41,6 @@ const VerticalTimelineElement = ({
   textClassName?: string;
   intersectionObserverProps?: Record<string, string | boolean>;
   visible?: boolean;
-  shadowSize?: string;
 }>) => (
   <InView {...intersectionObserverProps}>
     {({ inView, ref }) => (
