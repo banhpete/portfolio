@@ -10,11 +10,12 @@ export default function MenuButton({
   href: string;
 }>) {
   return (
-    <Link
-      className={`hover:animate-bounce ${active ? "text-blue-800" : ""}`}
-      href={href}
-    >
-      {children}
-    </Link>
+    <div className="group p-1">
+      <div className="group-hover:animate-bounce">
+        <Link className={`${active ? "text-blue-800" : ""}`} href={href}>
+          {children}
+        </Link>
+      </div>
+    </div>
   );
 }
