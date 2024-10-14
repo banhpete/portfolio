@@ -20,8 +20,8 @@ export default function Menu() {
         <MenuButton active={pathname == "/work"} href="/work">
           My Work
         </MenuButton>
-        <MenuButton active={pathname == "/blog"} href="/blog">
-          Blog
+        <MenuButton active={pathname == "/projects"} href="/projects">
+          Projects
         </MenuButton>
         <MenuButton active={pathname == "/contact"} href="/contact">
           Contact
