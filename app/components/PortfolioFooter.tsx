@@ -12,13 +12,13 @@ export default function PortfolioFooter() {
       <p>Designed/Conceptualized in Figma. Created using Nextjs.</p>
       <div className={`my-4 w-16 flex justify-between`}>
         <a rel="noopener noreferrer" href="https://github.com/banhpete">
-          <AiFillGithub className="size-7" />
+          <AiFillGithub className="size-7 transition hover:scale-125 hover:fill-blue-600" />
         </a>
         <a
           rel="noopener noreferrer"
           href="https://www.linkedin.com/in/peter-banh/"
         >
-          <AiFillLinkedin className="size-7" />
+          <AiFillLinkedin className="size-7 transition hover:scale-125 hover:fill-blue-600" />
         </a>
       </div>
     </footer>
