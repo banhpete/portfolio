@@ -18,7 +18,7 @@ export default function Menu() {
           About Me
         </MenuButton>
         <MenuButton active={pathname == "/work"} href="/work">
-          My Work
+          Work Experience
         </MenuButton>
         <MenuButton active={pathname == "/projects"} href="/projects">
           Projects
