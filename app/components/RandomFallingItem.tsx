@@ -3,7 +3,11 @@ import * as THREE from "three";
 import { useFrame } from "@react-three/fiber";
 import { MutableRefObject, useEffect, useRef } from "react";
 
-export const RandomFallingItem = (props) => {
+export const RandomFallingItem = (
+  props: Readonly<{
+    children: React.ReactNode;
+  }>
+) => {
   const ref = useRef<THREE.Group>() as MutableRefObject<
     THREE.Group<THREE.Object3DEventMap>
   >;
@@ -20,7 +24,7 @@ export const RandomFallingItem = (props) => {
     ref.current.rotateX(delta * 1);
 
     if (ref.current.position.y < -3) {
-      ref.current.position.set(Math.random() * 3, 4, Math.random() * 3);
+      ref.current.position.set(Math.random() * 3.5, 4, Math.random() * 3.5);
       speed.current = 1 + Math.random();
     }
   });
