@@ -12,6 +12,7 @@ import ChineseFood from "./components/ChineseFood";
 import Donut from "./components/Donut";
 import Sushi from "./components/Sushi";
 import { Suspense } from "react";
+import LoadingScreen from "./components/LoadingScreen";
 
 export default function Home() {
   const steps = {
@@ -24,7 +25,7 @@ export default function Home() {
     <div
       className={`absolute h-full w-full bg-white top-0 left-0 flex flex-col justify-center items-center`}
     >
-      <Suspense fallback={<h1>Loading</h1>}>
+      <Suspense fallback={<LoadingScreen />}>
         <Canvas
           className="absolute h-full w-full"
           camera={{ position: [5, 5, 6], fov: 25 }}

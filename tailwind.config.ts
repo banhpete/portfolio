@@ -12,6 +12,20 @@ const config: Config = {
       colors: {
         background: "var(--background)",
       },
+      animation: {
+        blinkdot1: 'blink 2s linear infinite',
+        blinkdot2: 'blink 2s linear 0.3s infinite',
+        blinkdot3: 'blink 2s linear 0.6s infinite',
+      },
+      keyframes: {
+        blink: {
+          '0%': { opacity: '0' },
+          "20%": { opacity: "1"},
+          '40%': {opacity: '1'},
+          '60%': {opacity: '1'},
+          '100%': { opacity: '0' },
+        }
+      }
     },
   },
   plugins: [
