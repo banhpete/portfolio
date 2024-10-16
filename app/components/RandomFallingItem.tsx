@@ -14,7 +14,7 @@ export const RandomFallingItem = (
   const speed = useRef<number>(1 + Math.random());
 
   const randomizePosition = (): [number, number, number] => {
-    return [Math.random() * 3, Math.random() * 3, Math.random() * 3];
+    return [Math.random() * 3, 3 + Math.random() * 3, Math.random() * 3];
   };
 
   useFrame((_state, delta) => {
