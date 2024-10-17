@@ -24,7 +24,7 @@ export const RandomFallingItem = (
     ref.current.rotateX(delta * 1);
 
     if (ref.current.position.y < -3) {
-      ref.current.position.set(Math.random() * 3.5, 4, Math.random() * 3.5);
+      ref.current.position.set(Math.random() * 6, 4, Math.random() * 6);
       speed.current = 1 + Math.random();
     }
   });

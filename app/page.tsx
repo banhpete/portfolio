@@ -4,7 +4,7 @@ import Link from "next/link";
 import Button from "./components/Button";
 import { TypeAnimation } from "react-type-animation";
 import { Canvas } from "@react-three/fiber";
-import { ContactShadows, Environment, OrbitControls } from "@react-three/drei";
+import { Environment } from "@react-three/drei";
 import Taco from "./components/Taco";
 import CornDog from "./components/CornDog";
 import { RandomFallingItem } from "./components/RandomFallingItem";
