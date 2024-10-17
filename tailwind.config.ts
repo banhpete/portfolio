@@ -16,6 +16,7 @@ const config: Config = {
         blinkdot1: 'blink 2s linear infinite',
         blinkdot2: 'blink 2s linear 0.3s infinite',
         blinkdot3: 'blink 2s linear 0.6s infinite',
+        slideleft: 'slideleft 5s linear 1 forwards'
       },
       keyframes: {
         blink: {
@@ -24,6 +25,10 @@ const config: Config = {
           '40%': {opacity: '1'},
           '60%': {opacity: '1'},
           '100%': { opacity: '0' },
+        },
+        slideleft:{
+          "0%": { left: "0px"},
+          "100%": {left:"-5000px"}
         }
       }
     },
