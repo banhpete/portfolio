@@ -5,7 +5,7 @@ import PortfolioFooter from "./components/PortfolioFooter";
 import { Poppins } from "next/font/google";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Peter Banh's Portfolio",
   description: "Welcome to my portfolio",
 };
 
@@ -30,11 +30,11 @@ export default function RootLayout({
             <PortfolioHeader />
           </div>
           <div
-            className={`mt-4 w-[800px] ${poppins.className} flex flex-grow justify-center`}
+            className={`mt-4 w-[900px] ${poppins.className} flex flex-grow justify-center`}
           >
             {children}
           </div>
-          <div className="mt-8 mb-16">
+          <div className="mt-8 mb-8">
             <PortfolioFooter />
           </div>
         </body>

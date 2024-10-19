@@ -19,6 +19,32 @@ export default function About() {
   return (
     <div className="flex mt-8 flex-1">
       <Tooltip id="my-tooltip" />
+      <div className="mr-10 pt-3 flex-1">
+        <h1 className="text-3xl text-center">
+          About me, <span className="text-blue-800 font-bold">Peter Banh</span>
+        </h1>
+        <p className="text-lg mt-8">
+          I'm a fullstack developer experienced with various languages and
+          frameworks such as <code>Java</code>, <code>C#</code>,{" "}
+          <code>NodeJs</code>, <code>React</code> and <code>Vue</code>. I'm an
+          avid and quick learner always excited to learn about new technology
+          and use it to build fun and impactful things.
+        </p>
+
+        <p className="text-lg mt-4">
+          Before becoming a full-stack developer, I worked as a Process Engineer
+          after graduating from the University of Toronto with a degree in
+          Materials Science and Engineering. During that time, I had the
+          opportunity to create a simple web app on my own, which sparked my
+          passion for software development, and I haven’t looked back since.
+        </p>
+
+        <p className="text-lg mt-4">
+          Currently, I am based in Burnaby, British Columbia, where I am
+          passionate about collaborating with teams to build beautiful, scalable
+          software that solves real-world problems.
+        </p>
+      </div>
       <div>
         <div className="flex mt-4 -mx-4 -mb-6 justify-between flex-row-reverse">
           <div className="w-8 h-8 rounded-full overflow-hidden">
@@ -34,8 +60,8 @@ export default function About() {
         <ReactSketchCanvas
           ref={canvasRef}
           style={{
-            width: "400px",
-            height: "560px",
+            width: "350px",
+            height: "490px",
           }}
           svgStyle={{
             boxShadow:
@@ -61,36 +87,6 @@ export default function About() {
             size={30}
             className="cursor-pointer"
           />
-        </div>
-      </div>
-      <div className="ml-8 flex-1">
-        <h1 className="animate-fade -text-lg text-center">
-          Hi I&apos;m Peter Banh. I&apos;m a full-stack developer and I love to:
-        </h1>
-        <p className="mt-2 font-semibold text-center leading-8">
-          <span className="animate-fade animate-delay-[600ms]">Learn</span>
-          <br />
-          <span className="animate-fade animate-delay-[1.5s]">
-            Build things
-          </span>
-          <br />
-          <span className="animate-fade animate-delay-[2.4s]">Help people</span>
-        </p>
-        <div className="animate-fade animate-delay-[2.8s]">
-          <p className={`px-5 py-3`}>
-            I started my career off as a Process Engineer after graduating
-            University of Toronto with a Bachelor of Applied Science in
-            Materials Science and Engineering. As a side project, I decided to
-            learn to code and build a simple web app for work and I fell in love
-            with programming. After two years of being a Process Engineer, I
-            quit, enrolled myself in a coding bootcamp at General Assembly and
-            haven&apos;t looked back since.
-          </p>
-          <p className={`px-5 py-3`}>
-            Now, I&apos;m based in Burnaby, British Columbia and I&apos;m
-            passionate about working with a team to build beautiful and scalable
-            software to solve problems for people.
-          </p>
         </div>
       </div>
     </div>
