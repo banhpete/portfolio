@@ -17,7 +17,7 @@ export default function About() {
   };
 
   return (
-    <div className="border-4 h-[675px] flex flex-col items-center justify-center">
+    <div className="flex mt-8 flex-1">
       <Tooltip id="my-tooltip" />
       <div>
         <div className="flex mt-4 -mx-4 -mb-6 justify-between flex-row-reverse">
@@ -33,17 +33,20 @@ export default function About() {
         </div>
         <ReactSketchCanvas
           ref={canvasRef}
-          height="12rem"
-          width="12rem"
-          svgStyle={{
-            borderRadius: "9999px",
-          }}
           style={{
-            border: "0",
+            width: "400px",
+            height: "560px",
+          }}
+          svgStyle={{
+            boxShadow:
+              "rgba(46, 125, 240, 0.4) 5px 5px 5px 5px, rgba(46, 125, 240, 0.3) 10px 10px 10px 10px,  rgba(46, 125, 240, 0.2) 15px 15px 15px 15px, rgba(46, 125, 240, 0.1) 20px 20px 20px 20px, rgba(46, 125, 240, 0.05) 25px 25px 25px 25px, rgba(46, 125, 240, 0.4) -5px -5px, rgba(46, 125, 240, 0.3) -10px -10px,  rgba(46, 125, 240, 0.2) -15px -15px, rgba(46, 125, 240, 0.1) -20px -20px, rgba(46, 125, 240, 0.05) -25px -25px",
+            border: "10px solid #3630d5",
+            borderRadius: "10%",
+            animation: "profile__animate 5s ease-in-out infinite",
           }}
           strokeColor={strokeColor}
           className="border-transparent"
-          backgroundImage="/images/peter.jpeg"
+          backgroundImage="/images/peter2.JPG"
         ></ReactSketchCanvas>
         <div className="flex justify-between -mt-6 -mx-4">
           <AiOutlineInfoCircle
@@ -60,7 +63,7 @@ export default function About() {
           />
         </div>
       </div>
-      <div className="mt-8">
+      <div className="ml-8 flex-1">
         <h1 className="animate-fade -text-lg text-center">
           Hi I&apos;m Peter Banh. I&apos;m a full-stack developer and I love to:
         </h1>

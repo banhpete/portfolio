@@ -19,7 +19,13 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body className="flex h-dvh flex-col items-center justify-between">
+        <body
+          style={{
+            background:
+              "linear-gradient(45deg, #9aaecc, #a5b4ce, #b8bfd2, #c8c8d5, #d0cdd7)",
+          }}
+          className="flex h-dvh flex-col items-center justify-between"
+        >
           <div className="mt-8">
             <PortfolioHeader />
           </div>
