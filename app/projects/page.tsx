@@ -7,6 +7,8 @@ export default function Projects() {
         title="Portfolio Page"
         technologiesUsed="Next.js"
         status="Stable Release"
+        src="/images/portfolio.png"
+        altForImage="Screenshot of portfolio page"
         className="my-2"
       >
         Project test
