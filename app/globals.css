@@ -62,7 +62,7 @@ body {
   left: 18px;
   height: 100%;
   width: 4px;
-  background: black;
+  background: #1e3a8a;
 }
 
 .vertical-timeline.vertical-timeline--one-column-right::before {
@@ -240,7 +240,7 @@ body {
   background: white;
   border-radius: 0.25em;
   padding: 1em;
-  box-shadow: 0 3px 0 #1e40af;
+  box-shadow: 0 4px 0 #1e40af;
 }
 
 .vertical-timeline--one-column-right .vertical-timeline-element-content {
@@ -290,7 +290,7 @@ body {
   height: 0;
   width: 0;
   border: 7px solid transparent;
-  border-right: 7px solid white;
+  border-right: 7px solid #eff6ff;
 
 }
 

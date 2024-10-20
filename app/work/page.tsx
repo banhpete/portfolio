@@ -12,21 +12,26 @@ import XeroIcon from "./components/icons/XeroIcon";
 
 export default function Work() {
   return (
-    <div className="h-[700px] flex flex-grow flex-col items-center">
+    <div className="flex flex-grow flex-col items-center">
       <h1 className="text-3xl mt-4 text-center">
-        Take a glimpse of what I&apos;ve done so far
+        Take a <span className="text-blue-800">glimpse</span> of what I&apos;ve
+        done so far
       </h1>
-      <div className="flex items-center mt-2 mb-8">
+      <div className="flex items-center mt-4 mb-8">
         <h2 className="text-xl">Or take a look at my CVS:&nbsp;&nbsp;</h2>
         <Button className="p-1">Download My CVS</Button>
       </div>
-      <div className="overflow-y-scroll flex flex-col w-full scroll">
+      <div className="flex flex-col w-full scroll">
         <VerticalTimeline>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="Apr 2023 - Present"
             dateClassName="px-2"
             iconClassName="bg-white"
+            contentStyle={{
+              backgroundColor: "#eff6ff",
+            }}
+            visible={false}
             icon={<A2XIcon className="size-9" />}
           >
             <h1 className="text-lg font-semibold">A2X</h1>
@@ -52,6 +57,10 @@ export default function Work() {
             date="Dec 2020 - Apr 2023"
             dateClassName="px-4"
             icon={<XeroIcon className="size-9" />}
+            contentStyle={{
+              backgroundColor: "#eff6ff",
+            }}
+            visible={false}
           >
             <h1 className="text-lg font-semibold">Xero</h1>
             <h2 className="text-sm font-semibold">
@@ -77,6 +86,10 @@ export default function Work() {
             date="Oct 2020 - Nov 2020"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={<AgsightIcon />}
+            contentStyle={{
+              backgroundColor: "#eff6ff",
+            }}
+            visible={false}
           >
             <h1 className="text-lg font-semibold">AgSights</h1>
             <h2 className="text-sm font-semibold">Software Developer</h2>
@@ -95,6 +108,10 @@ export default function Work() {
             className="vertical-timeline-element--education"
             date="May 2020 - July 2020"
             icon={<GeneralAssemblyIcon />}
+            contentStyle={{
+              backgroundColor: "#eff6ff",
+            }}
+            visible={false}
           >
             <h1 className="text-lg font-semibold">General Assembly Bootcamp</h1>
             <h2 className="text-sm font-semibold">
@@ -113,6 +130,10 @@ export default function Work() {
             className="vertical-timeline-element--work"
             date="May 2018 - May 2020"
             icon={<CelesticaIcon />}
+            contentStyle={{
+              backgroundColor: "#eff6ff",
+            }}
+            visible={false}
           >
             <h1 className="text-lg font-semibold">Celestica</h1>
             <h2 className="text-sm font-semibold">
@@ -134,6 +155,10 @@ export default function Work() {
             date="2014 - 2018"
             iconClassName="bg-white"
             icon={<UofTIcon />}
+            contentStyle={{
+              backgroundColor: "#eff6ff",
+            }}
+            visible={false}
           >
             <h1 className="text-lg font-semibold">University of Toronto</h1>
             <h2 className="text-sm font-semibold">

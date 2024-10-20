@@ -23,6 +23,7 @@ const VerticalTimelineElement = ({
     triggerOnce: true,
   },
   visible = true,
+  shadowSize,
 }: Readonly<{
   children?: React.ReactNode;
   className?: string;
@@ -41,6 +42,7 @@ const VerticalTimelineElement = ({
   textClassName?: string;
   intersectionObserverProps?: Record<string, string | boolean>;
   visible?: boolean;
+  shadowSize?: "small" | "medium" | "large";
 }>) => (
   <InView {...intersectionObserverProps}>
     {({ inView, ref }) => (
@@ -61,6 +63,7 @@ const VerticalTimelineElement = ({
             className={classNames(
               iconClassName,
               "vertical-timeline-element-icon",
+              `shadow-size-${shadowSize}`,
               {
                 "bounce-in": inView || visible,
                 "is-hidden": !(inView || visible),
