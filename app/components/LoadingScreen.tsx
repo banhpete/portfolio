@@ -1,5 +1,3 @@
-import { TypeAnimation } from "react-type-animation";
-
 export default function LoadingScreen({
   className,
 }: Readonly<{

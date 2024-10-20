@@ -15,12 +15,6 @@ import LoadingScreen from "./components/LoadingScreen";
 import { useProgress } from "@react-three/drei";
 
 export default function Home() {
-  const steps = {
-    "1": "Hello",
-    "2": "Xin chào",
-    "3": "你好",
-  };
-
   const { progress } = useProgress();
 
   return (
@@ -70,9 +64,9 @@ export default function Home() {
           repeat={Infinity}
         />
       </h1>
-      <h1 className="z-10 text-3xl mt-6">I'm Peter Banh</h1>
+      <h1 className="z-10 text-3xl mt-6">I&apos;m Peter Banh</h1>
       <h1 className="z-10 text-3xl mt-6">
-        I'm a Fullstack Developer and this is my portfolio
+        I&apos;m a Fullstack Developer and this is my portfolio
       </h1>
       <Link className="z-10" href="/about">
         <Button className="mt-8">Enter PBANH.dev</Button>

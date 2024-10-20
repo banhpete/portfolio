@@ -24,10 +24,10 @@ export default function About() {
           About me, <span className="text-blue-800 font-bold">Peter Banh</span>
         </h1>
         <p className="text-lg mt-8">
-          I'm a fullstack developer experienced with various languages and
+          I&apos;m a fullstack developer experienced with various languages and
           frameworks such as <code>Java</code>, <code>C#</code>,{" "}
-          <code>NodeJs</code>, <code>React</code> and <code>Vue</code>. I'm an
-          avid and quick learner always excited to learn about new technology
+          <code>NodeJs</code>, <code>React</code> and <code>Vue</code>. I&apos;m
+          an avid and quick learner always excited to learn about new technology
           and use it to build fun and impactful things.
         </p>
 
@@ -36,7 +36,8 @@ export default function About() {
           after graduating from the University of Toronto with a degree in
           Materials Science and Engineering. During that time, I had the
           opportunity to create a simple web app on my own, which sparked my
-          passion for software development, and I haven’t looked back since.
+          passion for software development, and I haven&apos;t looked back
+          since.
         </p>
 
         <p className="text-lg mt-4">

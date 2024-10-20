@@ -14,7 +14,7 @@ export default function Work() {
   return (
     <div className="h-[700px] flex flex-grow flex-col items-center">
       <h1 className="text-3xl mt-4 text-center">
-        Take a glimpse of what I've done so far
+        Take a glimpse of what I&apos;ve done so far
       </h1>
       <div className="flex items-center mt-2 mb-8">
         <h2 className="text-xl">Or take a look at my CVS:&nbsp;&nbsp;</h2>
@@ -67,8 +67,8 @@ export default function Work() {
               </li>
               <li>Led the scaling project for eInvoicing receiving</li>
               <li>
-                Created the BFF for Xero's new Bill's page ensuring the project
-                is ready for development
+                Created the BFF for Xero&apos;s new Bill&apos;s page ensuring
+                the project is ready for development
               </li>
             </ul>
           </VerticalTimelineElement>

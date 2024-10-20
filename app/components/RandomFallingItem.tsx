@@ -1,7 +1,7 @@
 import * as THREE from "three";
 
 import { useFrame } from "@react-three/fiber";
-import { MutableRefObject, useEffect, useRef } from "react";
+import { MutableRefObject, useRef } from "react";
 
 export const RandomFallingItem = (
   props: Readonly<{
