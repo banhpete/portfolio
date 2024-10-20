@@ -15,7 +15,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="border-4 h-[675px] flex flex-grow justify-center">
+    <div className="h-[675px] flex flex-grow justify-center">
       <div className="flex flex-col items-center w-5/6">
         <h1 className="mt-16 text-3xl">
           <i>Leave me a note</i>

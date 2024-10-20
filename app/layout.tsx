@@ -24,7 +24,7 @@ export default function RootLayout({
             background:
               "linear-gradient(45deg, #9aaecc, #a5b4ce, #b8bfd2, #c8c8d5, #d0cdd7)",
           }}
-          className="flex flex-col items-center justify-between"
+          className="min-h-screen flex flex-col items-center justify-between"
         >
           <div className="mt-8">
             <PortfolioHeader />
