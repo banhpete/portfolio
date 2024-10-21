@@ -22,15 +22,16 @@ export default function ProjectCard({
   return (
     <a href={projectLink} className="group" rel="noopener noreferrer">
       <div
-        className={`${className} min-h-[200px] text-white bg-slate-700 rounded-md flex justify-between p-4 group-hover:scale-105`}
+        className={`${className} min-h-[200px] text-white bg-slate-700 rounded-md flex items-center justify-between p-4 group-hover:scale-105`}
       >
-        <div className={"min-w-[250px] w-[250px] content-center"}>
+        <div
+          className={"relative in-w-[250px] w-[250px] h-[130px] content-center"}
+        >
           <Image
-            className="rounded-lg"
+            className="top-1/2 rounded-lg"
             src={src}
             alt={altForImage}
-            width={250}
-            height={200}
+            fill={true}
           ></Image>
         </div>
         <div className={"ml-6 flex py-1 flex-col flex-1"}>

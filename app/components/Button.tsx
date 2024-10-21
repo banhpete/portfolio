@@ -15,7 +15,7 @@ export default function Button({
 }>) {
   return (
     <button
-      className={`${className} disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-white hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white p-2 border-black border-2`}
+      className={`${className} bg-slate-200 disabled:bg-gray-300 disabled:cursor-not-allowed disabled:text-white hover:bg-blue-600 hover:text-white focus:bg-blue-600 focus:text-white p-2 border-black border-2`}
       onClick={onClick}
       onSubmit={onSubmit}
       type={type ? type : "button"}
