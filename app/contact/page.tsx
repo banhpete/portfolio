@@ -5,7 +5,6 @@ import Button from "../components/Button";
 import TextArea from "./components/TextArea";
 import TextInput from "./components/TextInput";
 import emailjs from "@emailjs/browser";
-import { setServers } from "dns";
 
 export default function Contact() {
   const [name, setName] = useState("");
