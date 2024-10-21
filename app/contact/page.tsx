@@ -1,17 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Button from "../components/Button";
 import TextArea from "./components/TextArea";
 import TextInput from "./components/TextInput";
+import emailjs from "@emailjs/browser";
+import { setServers } from "dns";
 
 export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const formRef = useRef<HTMLFormElement>(null!);
+  const [isLoading, setIsLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
 
-  const onSubmit = () => {
-    console.log(name, email, message, process.env.NEXT_PUBLIC_TEST_ENV);
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (!process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY) {
+      console.log("Did not send - In local environment");
+      setIsSuccess(true);
+      return;
+    }
+
+    setIsLoading(true);
+
+    emailjs
+      .sendForm("service_pgnqjbb", "contact_form", formRef.current, {
+        publicKey: process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY,
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setIsLoading(false);
+          setIsSuccess(true);
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          setIsLoading(false);
+          setIsSuccess(false);
+        }
+      );
   };
 
   return (
@@ -25,13 +55,7 @@ export default function Contact() {
           <br />
           Fill out the form below and I&apos;ll get back to you!
         </p>
-        <form
-          className="flex flex-col mt-6"
-          onSubmit={(event) => {
-            event.preventDefault();
-            onSubmit();
-          }}
-        >
+        <form ref={formRef} className="flex flex-col mt-6" onSubmit={onSubmit}>
           <div className="flex mt-4">
             <TextInput
               type="text"
@@ -60,10 +84,19 @@ export default function Contact() {
           <Button
             type="submit"
             className="mt-8 flex-grow"
-            disabled={!name || !email || !message}
+            disabled={!name || !email || !message || isLoading}
           >
             Submit
           </Button>
+          <div className="flex justify-center">
+            <p className="mt-6">
+              {isSuccess !== null
+                ? isSuccess
+                  ? "Thanks for sending a message! I'll get back to you as soon as I can!"
+                  : "Failed to send message. Please try again."
+                : ""}
+            </p>
+          </div>
         </form>
       </div>
     </div>

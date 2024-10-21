@@ -48,7 +48,7 @@ export default function About() {
       </div>
       <div>
         <div className="flex mt-4 -mx-4 -mb-6 justify-between flex-row-reverse">
-          <div className="w-8 h-8 rounded-full overflow-hidden">
+          <div className="focus-within:border-2 w-8 h-8 rounded-full overflow-hidden">
             <input
               title="Color"
               className="w-[200%] h-[200%] bg-transparent border-none cursor-pointer appearance-none transform-cpu -translate-x-1/4 -translate-y-1/4"
@@ -84,9 +84,10 @@ export default function About() {
             data-tooltip-place="top"
           />
           <AiOutlineRedo
+            tabIndex={0}
             onClick={refreshCanvas}
             size={30}
-            className="cursor-pointer"
+            className="cursor-pointer focus:border-2"
           />
         </div>
       </div>
