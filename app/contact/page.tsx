@@ -10,6 +10,11 @@ export default function Contact() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+
+  const [nameError, setNameError] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [messageError, setMessageError] = useState("");
+
   const formRef = useRef<HTMLFormElement>(null!);
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState<boolean | null>(null);
@@ -17,13 +22,22 @@ export default function Contact() {
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY) {
-      console.log("Did not send - In local environment");
-      setIsSuccess(true);
+    setIsLoading(true);
+
+    if (!name || !email || !message) {
+      !name && setNameError("Name is required.");
+      !email && setEmailError("Email is required.");
+      !message && setMessageError("Message is required.");
+      setIsLoading(false);
       return;
     }
 
-    setIsLoading(true);
+    if (!process.env.NEXT_PUBLIC_EMAIL_JS_PUBLIC_KEY) {
+      console.log("Did not send - In local environment");
+      setIsSuccess(true);
+      setIsLoading(false);
+      return;
+    }
 
     emailjs
       .sendForm("service_pgnqjbb", "contact_form", formRef.current, {
@@ -55,14 +69,18 @@ export default function Contact() {
           Fill out the form below and I&apos;ll get back to you!
         </p>
         <form ref={formRef} className="flex flex-col mt-6" onSubmit={onSubmit}>
-          <div className="flex mt-4">
+          <div className="flex mt-4 mb-1">
             <TextInput
               type="text"
               className="mr-2"
               label="Your name"
               placeHolder="Enter your name here..."
               id="name"
-              onChange={(e) => setName(e.currentTarget.value)}
+              error={nameError}
+              onChange={(e) => {
+                setNameError("");
+                setName(e.currentTarget.value);
+              }}
             />
             <TextInput
               type="email"
@@ -70,7 +88,11 @@ export default function Contact() {
               label="Your email"
               placeHolder="Enter your email here..."
               id="emailInput"
-              onChange={(e) => setEmail(e.currentTarget.value)}
+              error={emailError}
+              onChange={(e) => {
+                setEmailError("");
+                setEmail(e.currentTarget.value);
+              }}
             />
           </div>
           <TextArea
@@ -78,13 +100,13 @@ export default function Contact() {
             label="Your message"
             placeHolder="Enter your message here..."
             id="message"
-            onChange={(e) => setMessage(e.currentTarget.value)}
+            error={messageError}
+            onChange={(e) => {
+              setMessageError("");
+              setMessage(e.currentTarget.value);
+            }}
           />
-          <Button
-            type="submit"
-            className="mt-8 flex-grow"
-            disabled={!name || !email || !message || isLoading}
-          >
+          <Button type="submit" className="mt-8 flex-grow" disabled={isLoading}>
             Submit
           </Button>
           <div className="flex justify-center">
