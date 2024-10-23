@@ -18,8 +18,13 @@ export default function Work() {
         done so far
       </h1>
       <div className="flex items-center mt-4 mb-8">
-        <h2 className="text-xl">Or take a look at my CVS:&nbsp;&nbsp;</h2>
-        <Button className="p-1">Download My CVS</Button>
+        <h2 className="text-xl">Or take a look at my Resume:&nbsp;&nbsp;</h2>
+        <a
+          download
+          href="https://drive.google.com/uc?export=download&id=1qJXSO2uApgHBdGyFHKdWizhSmAEWdHa2"
+        >
+          <Button className="p-1">Download My Resume</Button>
+        </a>
       </div>
       <div className="flex flex-col w-full scroll">
         <VerticalTimeline>
