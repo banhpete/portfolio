@@ -6,7 +6,7 @@ import { Poppins } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Peter Banh's Portfolio",
-  description: "Welcome to my portfolio",
+  description: "Welcome to Peter Banh's portfolio",
 };
 
 const poppins = Poppins({ weight: ["400"], subsets: ["latin"] });

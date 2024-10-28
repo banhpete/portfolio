@@ -7,6 +7,7 @@ export default function TextInput({
   className,
   type,
   error,
+  disabled,
   onChange,
 }: Readonly<{
   id: string;
@@ -15,6 +16,7 @@ export default function TextInput({
   placeHolder?: string | undefined;
   className?: string | undefined;
   error?: string;
+  disabled?: boolean;
   onChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 }>) {
   return (
@@ -27,6 +29,7 @@ export default function TextInput({
           name={id}
           id={id}
           placeholder={placeHolder}
+          disabled={disabled}
           className={`${
             error && "animate-verticalShaking"
           } focus:outline-blue-800 focus:bg-blue-50 p-2 border-black border-2`}

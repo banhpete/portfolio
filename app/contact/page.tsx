@@ -61,7 +61,7 @@ export default function Contact() {
     <div className="h-[675px] flex flex-grow justify-center">
       <div className="flex flex-col items-center w-5/6">
         <h1 className="mt-16 text-3xl">
-          <i>Leave me a note</i>
+          Leave me a <span className="text-blue-800">note</span>
         </h1>
         <p className="mt-6 text-center">
           Want to collaborate? Have a question? Just want to say hi?
@@ -77,6 +77,7 @@ export default function Contact() {
               placeHolder="Enter your name here..."
               id="name"
               error={nameError}
+              disabled={isLoading}
               onChange={(e) => {
                 setNameError("");
                 setName(e.currentTarget.value);
@@ -89,6 +90,7 @@ export default function Contact() {
               placeHolder="Enter your email here..."
               id="emailInput"
               error={emailError}
+              disabled={isLoading}
               onChange={(e) => {
                 setEmailError("");
                 setEmail(e.currentTarget.value);
@@ -101,6 +103,7 @@ export default function Contact() {
             placeHolder="Enter your message here..."
             id="message"
             error={messageError}
+            disabled={isLoading}
             onChange={(e) => {
               setMessageError("");
               setMessage(e.currentTarget.value);

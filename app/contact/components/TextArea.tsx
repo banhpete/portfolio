@@ -6,6 +6,7 @@ export default function TextArea({
   placeHolder,
   className,
   error,
+  disabled,
   onChange,
 }: Readonly<{
   id: string;
@@ -13,6 +14,7 @@ export default function TextArea({
   placeHolder?: string | undefined;
   className?: string | undefined;
   error?: string;
+  disabled?: boolean;
   onChange: (e: ChangeEvent<HTMLTextAreaElement>) => void;
 }>) {
   return (
@@ -28,6 +30,7 @@ export default function TextArea({
         } p-2 w-full h-[175px] focus:outline-blue-800 focus:bg-blue-50 border-black border-2`}
         id={id}
         onChange={onChange}
+        disabled={disabled}
       ></textarea>
       <span className="text-xs ml-1 mt-1 h-[0.75rem] text-red-500">
         {error}
