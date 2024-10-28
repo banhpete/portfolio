@@ -17,7 +17,9 @@ const config: Config = {
         blinkdot2: 'blink 2s linear 0.3s infinite',
         blinkdot3: 'blink 2s linear 0.6s infinite',
         slideleft: 'slideleft 5s linear 1 forwards',
-        verticalShaking: 'verticalShaking 0.1s linear 1'
+        verticalShaking: 'verticalShaking 0.1s linear 1',
+        heightExpand: 'heightExpand 0.3s linear 1 forwards',
+        heightShrink: 'heightShrink 0.3s linear 1 forwards'
       },
       keyframes: {
         blink: {
@@ -37,6 +39,14 @@ const config: Config = {
           "50%": { transform: "translateY(-1px)" },
           "75%": { transform: "translateY(1px)" },
           "100%": { transform: "translateY(0)" }
+         },
+         heightExpand: {
+          "0%": {height: "0px"},
+          "100%": {height: "180px"}
+         },
+         heightShrink: {
+          "0%": {height: "180px"},
+          "100%": {height: "0px"}
          }
       }
     },

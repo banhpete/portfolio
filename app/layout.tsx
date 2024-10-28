@@ -26,16 +26,18 @@ export default function RootLayout({
           }}
           className="min-h-screen w-screen overflow-x-hidden flex flex-col items-center justify-between"
         >
-          <div className="mt-8">
-            <PortfolioHeader />
-          </div>
-          <div
-            className={`mt-4 w-[900px] ${poppins.className} flex flex-grow justify-center`}
-          >
-            {children}
-          </div>
-          <div className="mt-8 mb-8">
-            <PortfolioFooter />
+          <div className="lg:w-[900px]">
+            <div className="mt-8">
+              <PortfolioHeader />
+            </div>
+            <div
+              className={`mt-4 ${poppins.className} flex flex-grow justify-center`}
+            >
+              {children}
+            </div>
+            <div className="mt-8 mb-8">
+              <PortfolioFooter />
+            </div>
           </div>
         </body>
       </html>
