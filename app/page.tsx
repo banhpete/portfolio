@@ -65,7 +65,7 @@ export default function Home() {
         />
       </h1>
       <h1 className="z-10 text-3xl mt-6">I&apos;m Peter Banh</h1>
-      <h1 className="z-10 text-3xl mt-6">
+      <h1 className="z-10 text-3xl mt-6 text-center">
         I&apos;m a Fullstack Developer and this is my portfolio
       </h1>
       <Link className="z-10" href="/about">
