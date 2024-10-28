@@ -59,11 +59,11 @@ export default function Contact() {
 
   return (
     <div className="flex flex-grow justify-center">
-      <div className="flex flex-col items-center w-5/6">
+      <div className="flex flex-col items-center lg:w-5/6">
         <h1 className="mt-16 text-3xl">
           Leave me a <span className="text-blue-800">note</span>
         </h1>
-        <p className="mt-6 text-center">
+        <p className="mt-6 text-center px-2">
           Want to collaborate? Have a question? Just want to say hi?
           <br />
           Fill out the form below and I&apos;ll get back to you!

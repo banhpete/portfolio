@@ -27,7 +27,7 @@ export default function TextArea({
         name={id}
         className={`${
           error && "animate-verticalShaking"
-        } p-2 w-full h-[175px] focus:outline-blue-800 focus:bg-blue-50 border-black border-2`}
+        } p-2  h-[175px] focus:outline-blue-800 focus:bg-blue-50 border-black border-2`}
         id={id}
         onChange={onChange}
         disabled={disabled}
