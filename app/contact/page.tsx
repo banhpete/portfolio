@@ -112,16 +112,14 @@ export default function Contact() {
           <Button type="submit" className="mt-8 flex-grow" disabled={isLoading}>
             Submit
           </Button>
-          <div className="flex justify-center">
-            <p className="mt-6">
-              {isSuccess !== null
-                ? isSuccess
-                  ? "Thanks for sending a message! I'll get back to you as soon as I can!"
-                  : "Failed to send message. Please try again."
-                : ""}
-            </p>
-          </div>
         </form>
+        <p className="mt-6 mx-4 text-center">
+          {isSuccess !== null
+            ? isSuccess
+              ? "Thanks for sending a message! I'll get back to you as soon as I can!"
+              : "Failed to send message. Please try again."
+            : ""}
+        </p>
       </div>
     </div>
   );
