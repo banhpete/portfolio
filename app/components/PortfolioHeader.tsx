@@ -6,15 +6,11 @@ const koulen = Koulen({ weight: ["400"], subsets: ["latin"] });
 
 export default function PortfolioHeader({}) {
   return (
-    <div>
+    <header className={`flex flex-col items-center ${koulen.className}`}>
       <Link href="/">
-        <header
-          className={`flex items-center justify-center text-7xl ${koulen.className}`}
-        >
-          PBANH.DEV
-        </header>
+        <h1 className="text-7xl">PBANH.DEV</h1>
       </Link>
       <Menu />
-    </div>
+    </header>
   );
 }
