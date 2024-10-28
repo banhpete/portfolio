@@ -17,7 +17,7 @@ export default function Work() {
         Take a <span className="text-blue-800">glimpse</span> of what I&apos;ve
         done so far
       </h1>
-      <div className="flex items-center mt-4 mb-8">
+      <div className="flex flex-col items-center mt-4 mb-8 lg:flex-row">
         <h2 className="text-xl">Or take a look at my Resume:&nbsp;&nbsp;</h2>
         <a
           download

@@ -42,10 +42,10 @@ const config: Config = {
          },
          heightExpand: {
           "0%": {height: "0px"},
-          "100%": {height: "180px"}
+          "100%": {height: "190px"}
          },
          heightShrink: {
-          "0%": {height: "180px"},
+          "0%": {height: "190px"},
           "100%": {height: "0px"}
          }
       }

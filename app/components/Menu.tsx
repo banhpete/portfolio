@@ -45,7 +45,7 @@ export default function Menu() {
           koulen.className
         } px-24 flex flex-col h-0 ${
           isOpen ? "animate-heightExpand" : "animate-heightShrink"
-        } overflow-hidden mt-4 -mb-4
+        } overflow-hidden mt-4
         lg:h-auto lg:invisible lg:mt-0`}
       >
         <MenuButton active={pathname == "/about"} href="/about">
