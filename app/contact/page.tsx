@@ -58,7 +58,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="h-[675px] flex flex-grow justify-center">
+    <div className="flex flex-grow justify-center">
       <div className="flex flex-col items-center w-5/6">
         <h1 className="mt-16 text-3xl">
           Leave me a <span className="text-blue-800">note</span>
@@ -69,10 +69,10 @@ export default function Contact() {
           Fill out the form below and I&apos;ll get back to you!
         </p>
         <form ref={formRef} className="flex flex-col mt-6" onSubmit={onSubmit}>
-          <div className="flex mt-4 mb-1">
+          <div className="flex flex-col mt-4 mb-1 lg:flex-row">
             <TextInput
               type="text"
-              className="mr-2"
+              className="lg:mr-2"
               label="Your name"
               placeHolder="Enter your name here..."
               id="name"
@@ -85,7 +85,7 @@ export default function Contact() {
             />
             <TextInput
               type="email"
-              className="ml-2"
+              className="lg:ml-2"
               label="Your email"
               placeHolder="Enter your email here..."
               id="emailInput"
