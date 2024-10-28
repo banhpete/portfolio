@@ -4,6 +4,7 @@ import { ReactSketchCanvas, ReactSketchCanvasRef } from "react-sketch-canvas";
 import { AiOutlineInfoCircle, AiOutlineRedo } from "react-icons/ai";
 import { ChangeEvent, useRef, useState } from "react";
 import { Tooltip } from "react-tooltip";
+import Image from "next/image";
 
 export default function About() {
   const canvasRef = useRef<ReactSketchCanvasRef>(null);
@@ -19,10 +20,24 @@ export default function About() {
   return (
     <div className="flex mt-8 flex-1">
       <Tooltip id="my-tooltip" />
-      <div className="mr-10 pt-3 flex-1">
+      <div className="px-6 lg:px-0 pt-3 flex flex-col items-center">
         <h1 className="text-3xl text-center">
           About me, <span className="text-blue-800 font-bold">Peter Banh</span>
         </h1>
+        <Image
+          style={{
+            boxShadow:
+              "rgba(46, 125, 240, 0.4) 5px 5px 5px 5px, rgba(46, 125, 240, 0.3) 10px 10px 10px 10px,  rgba(46, 125, 240, 0.2) 15px 15px 15px 15px, rgba(46, 125, 240, 0.1) 20px 20px 20px 20px, rgba(46, 125, 240, 0.05) 25px 25px 25px 25px, rgba(46, 125, 240, 0.4) -5px -5px, rgba(46, 125, 240, 0.3) -10px -10px,  rgba(46, 125, 240, 0.2) -15px -15px, rgba(46, 125, 240, 0.1) -20px -20px, rgba(46, 125, 240, 0.05) -25px -25px",
+            border: "10px solid #3630d5",
+            borderRadius: "10%",
+            animation: "profile__animate 5s ease-in-out infinite",
+          }}
+          className={"block mt-8 lg:hidden lg:mt-0"}
+          alt="Picture of Peter"
+          src="/images/peter2.JPG"
+          height="150"
+          width="210"
+        ></Image>
         <p className="text-lg mt-8">
           I&apos;m a fullstack developer experienced with various languages and
           frameworks such as <code>Java</code>, <code>C#</code>,{" "}
@@ -46,7 +61,7 @@ export default function About() {
           software that solves real-world problems.
         </p>
       </div>
-      <div>
+      <div className="hidden lg:block ml-10">
         <div className="flex mt-4 -mx-4 -mb-6 justify-between flex-row-reverse">
           <div className="focus-within:border-2 w-8 h-8 rounded-full overflow-hidden">
             <input
