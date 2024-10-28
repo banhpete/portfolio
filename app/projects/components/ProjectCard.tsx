@@ -22,7 +22,7 @@ export default function ProjectCard({
   return (
     <a href={projectLink} className="group" rel="noopener noreferrer">
       <div
-        className={`${className} min-h-[200px] text-white bg-slate-700 rounded-md flex items-center justify-between p-4 group-hover:scale-105`}
+        className={`${className} min-h-[200px] text-white bg-slate-700 rounded-md flex flex-col items-center justify-between p-4 group-hover:scale-105 sm:flex-row`}
       >
         <div
           className={"relative in-w-[250px] w-[250px] h-[130px] content-center"}
@@ -34,8 +34,8 @@ export default function ProjectCard({
             fill={true}
           ></Image>
         </div>
-        <div className={"ml-6 flex py-1 flex-col flex-1"}>
-          <div className="flex mt-2 mb-2 text-center">
+        <div className={"ml-0 flex py-1 flex-col flex-1 sm:ml-6"}>
+          <div className="flex flex-col mt-2 mb-2 text-center sm:flex-row">
             <h1 className="text-lg font-medium">{title}</h1>
             <h2
               className={`rounded-lg ml-2 font-semibold text-[0.65rem] px-2 leading-7 ${
@@ -58,7 +58,7 @@ export default function ProjectCard({
             ))}
           </p>
         </div>
-        <div className="ml-4 w-3 text-5xl flex justify-end items-center">
+        <div className="hidden ml-4 w-3 text-5xl justify-end items-center sm:flex">
           <div className="relative">
             <span className="">&gt;</span>
             <div className="group-hover:translate-y-10 group-focus:translate-y-10 transition ease-linear duration-400 bg-slate-700 absolute top-0 left-0 h-full w-full"></div>
