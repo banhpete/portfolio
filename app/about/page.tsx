@@ -18,7 +18,7 @@ export default function About() {
   };
 
   return (
-    <div className="flex mt-8 flex-1">
+    <div className="flex mt-2 flex-1 lg:mt-8">
       <Tooltip id="my-tooltip" />
       <div className="px-6 lg:px-0 pt-3 flex flex-col items-center">
         <h1 className="text-3xl text-center">

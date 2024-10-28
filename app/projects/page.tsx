@@ -2,8 +2,8 @@ import ProjectCard from "./components/ProjectCard";
 
 export default function Projects() {
   return (
-    <div className="flex flex-col flex-grow p-4">
-      <h1 className="text-3xl mt-4 mb-8 text-center">
+    <div className="mt-0 flex flex-col flex-grow p-4 lg:mt-4">
+      <h1 className="text-3xl mb-8 text-center">
         <span className="text-blue-800">Random</span> projects I&apos;ve worked
         on
       </h1>
