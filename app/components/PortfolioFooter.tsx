@@ -9,7 +9,9 @@ export default function PortfolioFooter() {
       className={`text-sm ${poppins.className} flex flex-col items-center justify-center`}
     >
       <p>&copy; 2024 Peter Banh. All rights reserved.</p>
-      <p>Designed/Conceptualized in Figma. Created using Nextjs.</p>
+      <p className="text-center">
+        Designed/Conceptualized in Figma. Created using Nextjs.
+      </p>
       <div className={`my-4 w-16 flex justify-between`}>
         <a rel="noopener noreferrer" href="https://github.com/banhpete">
           <AiFillGithub className="size-7 transition hover:scale-125 hover:fill-blue-600" />
