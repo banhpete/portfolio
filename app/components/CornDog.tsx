@@ -37,7 +37,3 @@ export default function Model(props: JSX.IntrinsicElements["group"]) {
     </group>
   );
 }
-
-useGLTF.preload(
-  "https://vazxmixjsiawhamofees.supabase.co/storage/v1/object/public/models/corn-dog/model.gltf"
-);
