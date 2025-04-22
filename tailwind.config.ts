@@ -31,7 +31,7 @@ const config: Config = {
         },
         fade: {
           "0%": { opacity: "1" },
-          "100%": { opacity: "0" },
+          "100%": { opacity: "0", zIndex: "0" },
         },
         verticalShaking: {
           "0%": { transform: " translateY(0)" },
