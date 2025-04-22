@@ -19,13 +19,7 @@ export default function RootLayout({
   return (
     <>
       <html lang="en">
-        <body
-          style={{
-            background:
-              "linear-gradient(45deg, #9aaecc, #a5b4ce, #b8bfd2, #c8c8d5, #d0cdd7)",
-          }}
-          className="min-h-screen w-screen overflow-x-hidden flex flex-col items-center justify-between"
-        >
+        <body className="min-h-screen w-screen overflow-x-hidden flex flex-col items-center justify-between">
           <div className="lg:w-[900px]">
             <div className="mt-8">
               <PortfolioHeader />
